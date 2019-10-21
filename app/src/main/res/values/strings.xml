@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Buttom_Nav</string>
+    <string name="title_home">Home</string>
+    <string name="title_lampu">Lampu</string>
+    <string name="title_kelembaban">Kelembaban</string>
+    <string name="title_gas">Gas</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

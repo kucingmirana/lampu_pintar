@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.Fragment_lampu">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/header_kelembaban"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Kondisi Lampu Saat Ini"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="50dp"
+            android:textColor="#000"
+            android:textSize="24sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/lampu_kamar"
+                    android:layout_width="150dp"
+                    android:layout_height="220dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/shape">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/bluegrey"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_kamar"
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:text="Lampu Kamar"
+                            android:textColor="#000" />
+
+                        <ImageView
+                            android:id="@+id/img_kamar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_below="@id/txt_kamar"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/shape_circel"
+                            android:src="@drawable/ic_light_on_kamar"
+                            android:elevation="1pt" />
+
+                        <ImageView
+                            android:id="@+id/img_indikator_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_below="@id/img_kamar"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_power_kamar_off"
+                            android:background="@drawable/shape_circel"
+                            android:elevation="3pt" /> // off
+
+                        <ImageView
+                            android:id="@+id/img_indikator_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_below="@id/img_kamar"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_power_kamar_on"
+                            android:background="@drawable/shape_circel_on"
+                            android:visibility="invisible"
+                            android:elevation="3pt" /> on
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/lampu_tidur"
+                    android:layout_width="150dp"
+                    android:layout_height="220dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/shape">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/bluegrey"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_tidur"
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:text="Lampu Tidur"
+                            android:textColor="#000" />
+
+                        <ImageView
+                            android:id="@+id/img_tidur"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_below="@id/txt_tidur"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/shape_circel"
+                            android:src="@drawable/ic_light_on_tidur"
+                            android:elevation="1pt" />
+
+                        <ImageView
+                            android:id="@+id/img_indikator1_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_below="@id/img_tidur"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_power_tidur_off"
+                            android:background="@drawable/shape_circel2"
+                            android:elevation="3pt" />
+
+                        <ImageView
+                            android:id="@+id/img_indikator1_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_below="@id/img_tidur"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_power_tidur_on"
+                            android:background="@drawable/shape_circel2_on"
+                            android:visibility="invisible"
+                            android:elevation="3pt" />
+
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/lampu_kamar1"
+                    android:layout_width="150dp"
+                    android:layout_height="220dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/shape">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/bluegrey"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_kamar3"
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:text="Lampu Tamu"
+                            android:textColor="#000" />
+
+                        <ImageView
+                            android:id="@+id/img_kamar3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_below="@id/txt_kamar3"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/shape_circel"
+                            android:src="@drawable/ic_light_on_kamar"
+                            android:elevation="1pt" />
+
+                        <ImageView
+                            android:id="@+id/img_indikator2_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_below="@id/img_kamar3"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_power_kamar_off"
+                            android:background="@drawable/shape_circel"
+                            android:elevation="3pt" /> // off
+
+                        <ImageView
+                            android:id="@+id/img_indikator2_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_below="@id/img_kamar3"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_power_kamar_on"
+                            android:background="@drawable/shape_circel_on"
+                            android:visibility="invisible"
+                            android:elevation="3pt" /> on
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/lampu_tidur1"
+                    android:layout_width="150dp"
+                    android:layout_height="220dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/shape">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/bluegrey"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_tidur4"
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:text="Lampu Taman"
+                            android:textColor="#000" />
+
+                        <ImageView
+                            android:id="@+id/img_tidur4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_below="@id/txt_tidur4"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/shape_circel"
+                            android:src="@drawable/ic_light_on_tidur"
+                            android:elevation="1pt" />
+
+                        <ImageView
+                            android:id="@+id/img_indikator3_off"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_below="@id/img_tidur4"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_power_tidur_off"
+                            android:background="@drawable/shape_circel2"
+                            android:elevation="3pt" />
+
+                        <ImageView
+                            android:id="@+id/img_indikator3_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_below="@id/img_tidur4"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_power_tidur_on"
+                            android:background="@drawable/shape_circel2_on"
+                            android:visibility="invisible"
+                            android:elevation="3pt" />
+
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+
+
+</FrameLayout>
